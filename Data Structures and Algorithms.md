@@ -446,7 +446,8 @@ q.pop();
 * Ex: Medical emergencies (gunshot wound vs. broken arm)
 
 **Notes**
-* Often implemented as a `std::vector`
+* Often implemented as a `std::vector` so no include needed
+
 
 **Example Code**
 ```c++
@@ -455,6 +456,11 @@ std::priority_queue<int> p;
 //---------------------------------
 // General Operations
 //---------------------------------
+
+// Initialization
+std::priority_queue<int> P;   // max heap  by default
+std::priority_queue<int, std::vector<int>, std::greater<int> > P;   // min heap  
+
 
 //Insert
 p.push(value);
