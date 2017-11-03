@@ -17,6 +17,7 @@
 		- [1.8 Queue `std::queue`](#18-queue-stdqueue)
 		- [1.9 Priority Queue `std::priority_queue`](#19-priority-queue-stdpriorityqueue)
 		- [1.10 Heap `std::priority_queue`](#110-heap-stdpriorityqueue)
+		- [1.11 Sort `std::sort`](#11-heap-stdpriorityqueue)
 	- [2.0 Trees](#20-trees)
 		- [2.1 Binary Tree](#21-binary-tree)
 		- [2.2 Balanced Trees](#22-balanced-trees)
@@ -474,6 +475,7 @@ unsigned int size = p.size();
 //Remove
 p.pop();
 ```
+
 -------------------------------------------------------
 ### 1.10 Heap `std::priority_queue`
 **Notes**
@@ -487,6 +489,33 @@ p.pop();
 
 ![MaxHeap](General/MaxHeap.png)
 -------------------------------------------------------
+
+### 1.11 sort `std::sort`
+**Use for**
+* General sorting function for all iterable containers
+* flexible to work with any comparator functions
+
+**Notes**
+* include `algorithm `
+
+
+**Example Code**
+```c++
+#include <algorithm>
+#include <vector>
+
+bool cmp (int i,int j) { return (i<j); }
+bool rev_cmp (int i,int j) { return (i>j); }
+
+std::vector<int > v(10);
+
+sort(v.begin(), v.end(), cmp); // increasing order
+sort(v.begin(), v.end(), rev_cmp); // decreasing order
+
+
+```
+-------------------------------------------------------
+
 ## 2.0 Trees
 ### 2.1 Binary Tree
 * A binary tree is a tree with at most two (2) child nodes per parent
